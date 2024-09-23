@@ -1,4 +1,4 @@
-# LlamaPoll - Simulated Focus Groups With LLM Agents
+# LlamaPoll - Simulate Focus Groups With LLM Agents
 
 __TLDR: We built a multi-agent framework from scratch and used it to simulate focus groups__ 
 
