@@ -1,6 +1,6 @@
-# LlamaPoll - Predict Elections Way Better With LLM Agents
+# LlamaPoll - Predict Way Better With LLM Agents
 
-__TLDR: We built a multi-agent framework from scratch and used it to simulate election results in battleground states__ 
+__TLDR: We built a multi-agent framework from scratch and used it to simulate focus groups__ 
 
 Leaner than CrewAI & meaner than Autogen, we easily beat prompting & fine-tuning by using our conversational framework to spawn groupchats of collaborative agents to solve all your problems __(in just 4 lines of code)__.
 
