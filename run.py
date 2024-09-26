@@ -1,4 +1,4 @@
-from Network import Network
+from network import Network
 prompt = '''Kamala Harris is showing up to the Purnell Center today!'''
 population = '''Students at Carnegie Mellon University'''
 num_agents = 10
