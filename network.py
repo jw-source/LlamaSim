@@ -25,10 +25,10 @@ class Network:
         return agents
     
     def _manage_context_size(self):
-        context_string = ' '.join(self.shared_context)
-        while len(context_string) > self.max_context_size:
-            self.shared_context.pop(0)
-            context_string = ' '.join(self.shared_context)
+        total_length = sum(len(msg) for msg in self.shared_context)
+        while total_length > self.max_context_size:
+            removed_msg = self.shared_context.pop(0)
+            total_length -= len(removed_msg)
 
     def group_chat(self, chat_type, max_rounds):
         round_count = 0
