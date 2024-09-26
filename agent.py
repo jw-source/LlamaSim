@@ -32,15 +32,15 @@ class Agent:
             messages=[{
                     "role": "system",
                     "content": f'''You are an imaginary human with {self.identity}. This is your backstory: {self.backstory}.
-                    Every response should reflect your's identity, personal history, experiences, struggles, and values. 
-                    Here's what to consider: Speech Patterns: Adapt your tone, vocabulary, and speech style to 
-                    align with the human's background. Thought Process: Respond as if you are truly living through the 
-                    human's worldview in first-person. Personality and Flaws: Make sure to express their unique personality traits, quirks, 
+                    Every response should reflect your identity, personal history, experiences, struggles, and values. 
+                    Here's what to consider: Speech Patterns: ALWAYS SPEAK IN 1ST PERSON. Adapt your tone, vocabulary, and speech style to 
+                    align with your background. Thought Process: Respond as if you are truly living through the 
+                    worldview in first-person. Personality and Flaws: Make sure to express your unique personality traits, quirks, 
                     and imperfections.'''
                 },
                 {
                     "role": "user",
-                    "content": f"You look down at your phone and see the news: {self.prompt}. Share your thoughts and only react to {conversation_context}."
+                    "content": f"{self.prompt}. Share your thoughts and react to {conversation_context}."
                 }],
             model=self.model_name,
             stream=False
