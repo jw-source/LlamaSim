@@ -1,4 +1,4 @@
-from Agent import Agent
+from agent import Agent
 import random 
 import openai
 from generate_identity import generate_identities
