@@ -1,0 +1,50 @@
+from Agent import Agent
+import random 
+import openai
+from generate_identity import generate_identities
+
+class Network:
+    def __init__(self, prompt:str, data:str, num_agents:int):
+        self.prompt = prompt
+        self.names, self.identities = self._create_identities(data, num_agents)
+        self.client = openai.OpenAI(
+            base_url='https://api.cerebras.ai/v1',
+            api_key=""
+        )
+        self.shared_context = []
+        self.max_context_size = 4000
+        self.agents = self._init_agents()
+        
+    def _create_identities(self, data:str, num_agents:int):
+        names, identities = generate_identities(data, num_agents)
+        return names, identities
+        
+    def _init_agents(self):
+        agents = [Agent(name=name, prompt=self.prompt, identity=identity, client=self.client) 
+                  for name, identity in zip(self.names, self.identities)]
+        return agents
+    
+    def _manage_context_size(self):
+        context_string = ' '.join(self.shared_context)
+        while len(context_string) > self.max_context_size:
+            self.shared_context.pop(0)
+            context_string = ' '.join(self.shared_context)
+
+    def group_chat(self, chat_type, max_rounds):
+        round_count = 0
+        while round_count < max_rounds: 
+            if chat_type == "round_robin":
+                for _, agent in enumerate(self.agents):
+                    agent_response = agent.chat(self.shared_context)
+                    self.shared_context.append(agent.name + ": " + agent_response)
+                    self._manage_context_size()
+                    print(f"\n{agent.name}: {agent_response}")
+            elif chat_type == "random":
+                for i in range(len(self.agents)):
+                    agent = random.choice(self.agents)
+                    agent_response = agent.chat(self.shared_context)
+                    self.shared_context.append(agent.name + ": " + agent_response)
+                    self._manage_context_size()
+                    print(f"\n{agent.name}: {agent_response}")
+            round_count += 1
+        return self.shared_context
