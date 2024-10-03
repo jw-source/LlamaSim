@@ -12,6 +12,16 @@
 
 # LlamaPoll: 
 
-__TLDR: We built a multi-agent framework that can simulate human behavior at scale__ 
+LlamaPoll is a baby (still developing!) multi-agent framework that can simulate human behavior at scale. Given a specific environment (voters in Pennsylvania, students at CMU, etc.), we use demographic data to replicate target groups, and aim to provide actionable insights for important questions/events. 
 
 More to come...
+
+## Usage: 
+```python 
+from network import Network
+prompt = '''Kamala Harris is showing up to the Purnell Center today!'''
+population = '''Students at Carnegie Mellon University'''
+num_agents = 10
+agent_network = Network(prompt, population, num_agents)
+agent_network.group_chat("random", 1)
+```
