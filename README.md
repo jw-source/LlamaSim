@@ -1,4 +1,4 @@
-# LlamaPoll 🦙: - Simulate The World With LLM Agents
+# LlamaSim 🦙: - Simulate The World With LLM Agents
 
 __TLDR: We built a multi-agent framework from scratch and used it to simulate focus groups__ 
 
