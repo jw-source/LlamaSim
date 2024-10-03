@@ -12,7 +12,7 @@
 
 # LlamaPoll: 
 
-LlamaPoll is a baby (still developing!) multi-agent framework that can simulate human behavior at scale. Given a specific environment (voters in Pennsylvania, students at CMU, etc.), we use demographic data to replicate target groups, and aim to provide actionable insights for important questions/events. 
+LlamaPoll is a baby (still developing!) multi-agent framework that aims to simulate human behavior at scale. Given a specific environment (voters in Pennsylvania, students at CMU, focus group participants etc.), we use demographic data to replicate target groups, and aim to provide actionable insights for important questions/events. 
 
 More to come...
 
