@@ -3,13 +3,13 @@
 </p>
 
 <p align="center">
-  <em>Simulate the world with LLM agents</em>
+  <em>Simulate human behavior with LLM agents</em>
 </p>
 <p align="center">
 <a href="https://reworkd.ai/">🔗 <b>Website</b></a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 <b>Twitter</b></a>
-  
+
 # LlamaPoll: 
 
 __TLDR: We built a multi-agent framework that can simulate human behavior at scale__ 
