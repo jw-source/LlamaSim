@@ -6,13 +6,14 @@
   <em>Simulate the world with LLM agents</em>
 </p>
 <p align="center">
-<a href="https://reworkd.ai/">🔗 Website</a>
+<a href="https://reworkd.ai/">🔗 <b>Website</b></a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 Twitter</a>
+<a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 <b>Twitter</b></a>
   
 # LlamaPoll: 
 
-__TLDR: We built a multi-agent framework from scratch and used it to simulate focus groups__ 
+__TLDR: We built a multi-agent framework from scratch and used it to simulate human behavior at scale__ 
+
 Use our conversational framework to spawn groupchats of collaborative agents to solve all your problems __(in just 4 lines of code)__.
 
 We adapted this framework to simulate focus groups in real-time: by using data to replicate diversity, generating detailed backstories for AI agents, and programming them to think exactly like the people they are acting out. 
