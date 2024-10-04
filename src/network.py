@@ -3,13 +3,17 @@ import random
 import openai
 from generate_identity import generate_identities
 import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 class Network:
     def __init__(self, data:str, num_agents:int, max_context_size:int):
         self.names, self.identities = self._create_identities(data, num_agents)
         self.client = openai.OpenAI(
             base_url='https://api.cerebras.ai/v1',
-            api_key=""
+            api_key=os.getenv("CEREBRAS_API_KEY")
         )
         self.shared_context = []
         self.conversation_logs = []

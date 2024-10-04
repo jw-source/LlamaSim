@@ -1,7 +1,10 @@
 import openai
 import json
 from pydantic import BaseModel
-gpt_client = openai.OpenAI(api_key="")
+from dotenv import load_dotenv
+import os
+load_dotenv()
+gpt_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class IdentitySchema(BaseModel):
     ListOfOnlyNames: list[str]
