@@ -16,6 +16,12 @@ LlamaPoll is a baby (still developing!) multi-agent framework that aims to simul
 
 More to come...
 
+## Potential Use-Cases
+Traditional election polling isn't able to react fast enough to breaking news, but LlamaPoll can. 
+
+## Historical Backtesting
+In progress...
+
 ## Usage: 
 ```python 
 from network import Network
