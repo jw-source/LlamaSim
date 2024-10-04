@@ -6,7 +6,7 @@
   <em>Simulate human behavior with LLM agents</em>
 </p>
 <p align="center">
-<a href="website_placeholder">🔗 <b>Website</b></a>
+<a href="website_placeholder">🔗 <b>Demo</b></a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 <b>Twitter</b></a>
 
