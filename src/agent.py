@@ -1,8 +1,8 @@
 from openai import OpenAI
 
 class Agent:
-    def __init__(self, prompt:str, name:str, identity:str, client:OpenAI):
-        self.prompt = prompt
+    def __init__(self, name:str, identity:str, client:OpenAI):
+        self.prompt = None
         self.name = name
         self.identity = identity
         self.client = client
@@ -40,7 +40,7 @@ class Agent:
                 },
                 {
                     "role": "user",
-                    "content": f"{self.prompt}. Share your thoughts and react to {conversation_context}."
+                    "content": f"{self.prompt}. Share your thoughts and react (or not react) to {conversation_context}."
                 }],
             model=self.model_name,
             stream=False
