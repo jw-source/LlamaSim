@@ -2,6 +2,7 @@ from agent import Agent
 import random 
 import openai
 from generate_identity import generate_identities
+import time
 
 class Network:
     def __init__(self, prompt:str, data:str, num_agents:int):
@@ -13,15 +14,24 @@ class Network:
         )
         self.shared_context = []
         self.max_context_size = 4000
+        self.num_agents = num_agents
         self.agents = self._init_agents()
         
     def _create_identities(self, data:str, num_agents:int):
+        start_time = time.time()
         names, identities = generate_identities(data, num_agents)
+        end_time = time.time()
+        elapsed_time = round(end_time - start_time, 2)
+        print(f"Generated {num_agents} identities in: {elapsed_time} seconds")
         return names, identities
         
     def _init_agents(self):
+        start_time = time.time()
         agents = [Agent(name=name, prompt=self.prompt, identity=identity, client=self.client) 
                   for name, identity in zip(self.names, self.identities)]
+        end_time = time.time()
+        elapsed_time = round(end_time - start_time, 2)
+        print(f"Generated {self.num_agents} backstories in: {elapsed_time} seconds")
         return agents
     
     def _manage_context_size(self):
