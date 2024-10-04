@@ -9,7 +9,7 @@ class Network:
         self.names, self.identities = self._create_identities(data, num_agents)
         self.client = openai.OpenAI(
             base_url='https://api.cerebras.ai/v1',
-            api_key="csk-tr33y8n58m4xh4h55yfdpckryddevjktxw4e5jw4m4w66536"
+            api_key=""
         )
         self.shared_context = []
         self.conversation_logs = []
