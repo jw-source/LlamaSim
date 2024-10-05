@@ -14,19 +14,21 @@ def generate_agents(population, num_agents, context_size):
 
 def start_groupchat(prompt, chat_type, rounds):
     global agent_network
-    if agent_network is None:
-        return [], gr.update(value="Please generate agents before starting the group chat.")
-    else:
-        conversation_logs = agent_network.group_chat(prompt, chat_type, rounds)
-        conversation_pairs = []
-        for i in range(0, len(conversation_logs), 2):
-            user_msg = conversation_logs[i]
-            if i+1 < len(conversation_logs):
-                bot_msg = conversation_logs[i+1]
-            else:
-                bot_msg = ""
-            conversation_pairs.append((user_msg, bot_msg))
-        return conversation_pairs, gr.update(value="")
+    conversation_logs = agent_network.group_chat(prompt, chat_type, rounds)
+    conversation_pairs = []
+    for i in range(0, len(conversation_logs), 2):
+        user_msg = conversation_logs[i]
+        if i+1 < len(conversation_logs):
+            bot_msg = conversation_logs[i+1]
+        else:
+            bot_msg = ""
+        conversation_pairs.append((user_msg, bot_msg))
+    return conversation_pairs
+
+def start_prediction(prompt, question):
+    global agent_network
+    percent_increase_in_zeros, percent_increase_in_ones, percent_increase_in_twos = agent_network.predict(prompt, question)
+    return percent_increase_in_zeros, percent_increase_in_ones, percent_increase_in_twos
 
 with gr.Blocks() as demo:
     gr.Markdown("# LlamaPoll")
@@ -43,7 +45,7 @@ with gr.Blocks() as demo:
                     label="Number of Agents", value=10
                 )
                 memory_size_input = gr.Number(
-                    label="Memory Size", value=4000
+                    label="Memory Size (Characters)", value=4000
                 )
             generate_agents_button = gr.Button("Generate Agents")
 
@@ -69,10 +71,24 @@ with gr.Blocks() as demo:
             groupchat_button = gr.Button("Start Groupchat")
             gr.Markdown("### Groupchat History")
             conversation = gr.Chatbot(label="Conversation")
-            error_message = gr.Textbox(value="", visible=False, interactive=False)
 
     with gr.Tab("Predict"):
-        pass
+        with gr.Column():
+            with gr.Row():
+                prompt_input_predict = gr.Textbox(
+                    label="Prompt",
+                    value="Kamala Harris is showing up to the Purnell Center today!",
+                    lines=2
+                )
+                question_input_predict = gr.Textbox(
+                    label="Question",
+                    value="Are you voting for Kamala Harris?",
+                    lines=2
+                )
+            predict_button = gr.Button("Start Prediction")
+            ones_output = gr.Textbox(interactive=False)
+            zeros_output = gr.Textbox(interactive=False)
+            twos_output = gr.Textbox(interactive=False)
 
     generate_agents_button.click(
         fn=generate_agents,
@@ -91,7 +107,16 @@ with gr.Blocks() as demo:
             chat_type_input,
             rounds_input,
         ],
-        outputs=[conversation, error_message],
+        outputs=[conversation],
+    )
+
+    predict_button.click(
+        fn=start_prediction,
+        inputs=[
+            prompt_input_predict,
+            question_input_predict,
+        ],
+        outputs=[ones_output, zeros_output, twos_output],
     )
 
 demo.launch()
