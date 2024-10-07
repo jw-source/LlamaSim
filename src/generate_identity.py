@@ -24,23 +24,21 @@ def generate_identities(data:str, num_agents:int):
             - **Gender**
             - **Race/Ethnicity**
             - **Nationality**
-            - **City/Town**
-            - **Country of Residence**
+            - **City/Town of Residence**: Where the person is currently living.
+            - **Country of Residence**: Where the person is currently living.
             - **Education Level**
             - **Field of Study**
-            - **Academic Performance**: 1 to 10, indicating performance level.
             - **Occupation**: Include job title and industry.
             - **Income Level**: Include a range, e.g., $30,000-$40,000.
             - **Marital Status**: Single, Married, Divorced, etc.
             - **Number of Children**
             - **Housing Situation**: Owns a house, rents an apartment, etc.
-            - **Myers-Briggs Type (MBTI)**: Include the 4-letter type, e.g., ENFP, ISTJ.
             - **Sexual Orientation**: Heterosexual, Homosexual, Bisexual, etc.
             - **Gender**: Male, Female, Non-binary, etc.
             - **Socioeconomic Background**
             - **Happiness Index**: 1 to 10, indicating level of happiness.
-            - **IQ Score**: 1 to 10, indicating intelligence level.
-            - **EQ Score**: 1 to 10, indicating emotional intelligence.
+            - **IQ Score**: indicating intelligence level.
+            - **EQ Score**: indicating emotional intelligence.
             - **Religion/Belief**: Agnostic, Atheist, Christian, Buddhist, Muslim, etc.
             - **Religious Devotion Level**: 1 to 10, indicating level of devotion.
             - **Physical Health Status**: 1 to 10, indicating physical health.
@@ -48,7 +46,12 @@ def generate_identities(data:str, num_agents:int):
             - **Disabilities and Health Conditions**: Include any relevant conditions, e.g., ADHD, anxiety, None.
             - **Political Ideology**: Republican, Democrat, Independent, etc.
             - **Political Engagement/Intensity**: 1 to 10, indicating strength of beliefs.
-            - **Financial Literacy/Behavior**>: 1 to 10, indicating financial knowledge and habits.
+            - **Financial Literacy/Behavior**: 1 to 10, indicating financial knowledge and habits.
+            - **Openness to Experience**: 1 to 10, indicating creativity, curiosity, and willingness to explore new ideas.
+            - **Conscientiousness**: 1 to 10, indicating organization, reliability, and self-discipline.
+            - **Extraversion**: 1 to 10, indicating sociability, assertiveness, and enthusiasm for social interaction.
+            - **Agreeableness**: 1 to 10, indicating compassion, cooperativeness, and trust in others.
+            - **Neuroticism**: 1 to 10, indicating emotional stability, tendency toward anxiety, depression, or mood swings.
 
             **Example Output**:
             Name: Jessica Ramirez
@@ -56,22 +59,20 @@ def generate_identities(data:str, num_agents:int):
             Gender: Female
             Race/Ethnicity: Hispanic/Latina
             Nationality: Mexican
-            City/Town: Guadalajara
-            Country of Residence: Mexico
+            City/Town: New York City
+            Country of Residence: USA
             Education Level: Bachelor's Degree
             Field of Study: Marketing
-            Academic Performance: 7
             Occupation: Marketing Specialist, Digital Marketing Industry
             Income Level: $25,000-$35,000
             Marital Status: Single
             Number of Children: 0
             Housing Situation: Rents an apartment
-            Myers-Briggs Type (MBTI): ESFJ
             Sexual Orientation: Heterosexual
             Socioeconomic Background: Middle class
             Happiness Index: 8
-            IQ Score: 6
-            EQ Score: 9
+            IQ Score: 91
+            EQ Score: 75
             Religion/Belief: Catholic
             Religious Devotion Level: 6
             Physical Health Status: 7
@@ -79,7 +80,12 @@ def generate_identities(data:str, num_agents:int):
             Disabilities and Health Conditions: None
             Political Ideology: Independent
             Political Engagement/Intensity: 4
-            Financial Literacy/Behavior: 5''',
+            Financial Literacy/Behavior: 5
+            Openness to Experience: 9
+            Conscientiousness: 7
+            Extraversion: 5
+            Agreeableness: 8
+            Neuroticism: 10''',
         },
     ],
     response_format=IdentitySchema)
