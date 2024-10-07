@@ -31,7 +31,7 @@ def start_prediction(prompt, question):
     return percent_increase_in_zeros, percent_increase_in_ones, percent_increase_in_twos
 
 with gr.Blocks() as demo:
-    gr.Markdown("# LlamaPoll")
+    gr.Markdown("# LlamaSim")
 
     with gr.Tab("Generate Agents"):
         with gr.Column():
