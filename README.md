@@ -6,7 +6,7 @@
   <em>Simulate human behavior with LLM agents</em>
 </p>
 <p align="center">
-<a href="https://www.loom.com/share/e7a6bf9cf44448ed99e7b29cd790d918?sid=c36b767b-ad39-4006-939b-1c623a36d263">🔗 <b>Demo</b></a>
+<a href="https://www.loom.com/share/e7a6bf9cf44448ed99e7b29cd790d918?sid=c36b767b-ad39-4006-939b-1c623a36d263">🔗 <b>Demo Video</b></a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 <b>Twitter</b></a>
 
