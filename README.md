@@ -26,10 +26,11 @@ More to come...
 - [ ] Live Data Feeds for Agents (allowing them to stay up-to-date)
 
 ## Usage: 
-```python 
+```python
 from network import Network
-prompt = '''Kamala Harris is showing up to the Purnell Center today!'''
-population = '''Carnegie Mellon University students'''
-agent_network = Network(population, num_agents=5, max_context_size=4000)
-agent_network.group_chat(prompt, "random", 1)
+agent_network = Network(population="Pennsylvania Voters", num_agents=5, max_context_size=4000)
+prompt = "Gas prices are an all-time high."
+question = "Are you voting for Kamala Harris?"
+agent_network.group_chat(prompt, "random", max_rounds=1)
+agent_network.predict(prompt, question)
 ```
