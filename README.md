@@ -10,17 +10,20 @@
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://x.com/CerebrasSystems/status/1838684550282559545">🐦 <b>Twitter</b></a>
 
-# LlamaPoll: 
+# LlamaSim: 
 
-LlamaPoll is a baby (still developing!) multi-agent framework that aims to simulate human behavior at scale. Given a specific environment (voters in Pennsylvania, students at CMU, focus group participants etc.), we use demographic data to replicate target groups, and aim to provide actionable insights for important questions/events. 
+LlamaSim is a baby (still developing!) multi-agent framework that aims to simulate human behavior at scale. Given a specific environment (e.g., voters in Pennsylvania, students at CMU), we replicate target groups, and aim to provide actionable insights for important questions/events. 
 
 More to come...
 
-## Potential Use-Cases
-Traditional election polling isn't able to react fast enough to breaking news, but LlamaPoll can. 
-
-## Historical Backtesting
-In progress...
+## Roadmap
+- [x] Predictive Functionality
+- [x] Gradio Frontend (Local Demo)
+- [ ] Live Demo
+- [ ] Demographically Aligned Agents
+- [ ] Long-Term Memory (maybe mem0.ai?)
+- [ ] Graph Theory Approach
+- [ ] Live Data Feeds for Agents (allowing them to stay up-to-date)
 
 ## Usage: 
 ```python 
