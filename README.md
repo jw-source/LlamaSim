@@ -26,6 +26,12 @@ More to come...
 - [ ] Live Data Feeds for Agents (allowing them to stay up-to-date)
 
 ## Usage: 
+```
+git clone https://github.com/jw-source/LlamaSim
+```
+```
+cd src/run.py
+```
 ```python
 from network import Network
 agent_network = Network(population="Pennsylvania Voters", num_agents=5, max_context_size=4000)
