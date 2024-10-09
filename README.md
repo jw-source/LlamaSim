@@ -33,20 +33,16 @@ git clone https://github.com/jw-source/LlamaSim
 ```bash
 # Add API keys to .env
 mv env.txt .env
-```
-```bash
+
 # Create venv
 python3 -m venv .venv
-```
-```bash
+
 # Set the venv
 source .venv/bin/activate
-```
-```bash
+
 # Install dependencies
 pip install -r requirements.txt
-```
-```bash
+
 # Run
 cd src
 python run.py
