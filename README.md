@@ -17,31 +17,38 @@ LlamaSim is a multi-LLM framework that aims to simulate human behavior at scale.
 More to come...
 
 ## Roadmap
-- [x] Predictive Functionality
 - [x] Gradio Frontend (Local Demo)
-- [ ] Agentic Functionality
-- [ ] Demographically Aligned Agents
-- [ ] Long-Term Memory (maybe mem0.ai?)
-- [ ] Graph Theory Approach
-- [ ] Live Data Feeds for Agents (allowing them to stay up-to-date)
+- [ ] Rewrite Agent Generatation using Cerebras instead of OpenAI
+- [ ] Improve Memory using mem0.ai
+- [ ] Demographically Aligned Agents on-the-fly
+- [ ] Live Data Feeds for Agents
+- [ ] Async Communication for Agents
 - [ ] Live Demo
 
 ## Usage: 
-```
+```bash
+# Clone the repository
 git clone https://github.com/jw-source/LlamaSim
 ```
 ```python
+# Add API keys to .env
 mv env.txt .env
-#create venv
+
+# Create venv
 python3 -m venv .venv
 
-#set the venv
+# Set the venv
 source .venv/bin/activate
 
-# install dependancies
+# Install dependencies
 pip install -r requirements.txt
-cd src/run.py
+
+# Run
+cd src
+python run.py
 ```
+
+### Real Example
 ```python
 from network import Network
 agent_network = Network(population="Pennsylvania Voters", num_agents=5, max_context_size=4000)
