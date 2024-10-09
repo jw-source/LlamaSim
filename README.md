@@ -30,7 +30,16 @@ More to come...
 ```
 git clone https://github.com/jw-source/LlamaSim
 ```
-```
+```python
+mv env.txt .env
+#create venv
+python3 -m venv .venv
+
+#set the venv
+source .venv/bin/activate
+
+# install dependancies
+pip install -r requirements.txt
 cd src/run.py
 ```
 ```python
