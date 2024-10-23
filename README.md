@@ -18,7 +18,7 @@ More to come...
 
 ## Roadmap
 - [x] Gradio Frontend (Local Demo)
-- [ ] Supports mem0 for memory (alt_... files)
+- [x] Supports mem0 for memory (alt_... files) - working on stability
 - [ ] Rewrite Agent Generatation using Cerebras instead of OpenAI
 - [ ] Demographically Aligned Agents on-the-fly
 - [ ] Live Data Feeds for Agents
@@ -30,6 +30,7 @@ More to come...
 # Clone the repository
 git clone https://github.com/jw-source/LlamaSim
 ```
+__NOTE:__ files that start with __"alt..."__ are mem0 implementations of the original code (currently improving stability)
 ```bash
 # Add API keys to .env
 mv env.txt .env
