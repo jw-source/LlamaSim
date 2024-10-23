@@ -18,8 +18,8 @@ More to come...
 
 ## Roadmap
 - [x] Gradio Frontend (Local Demo)
+- [ ] Supports mem0 for memory (alt_... files)
 - [ ] Rewrite Agent Generatation using Cerebras instead of OpenAI
-- [ ] Improve Memory using mem0.ai
 - [ ] Demographically Aligned Agents on-the-fly
 - [ ] Live Data Feeds for Agents
 - [ ] Async Communication for Agents
